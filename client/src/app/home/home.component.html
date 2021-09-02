@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <div class="p-5 mb-4 bg-dark text-white rounded-3 shadow" *ngIf="!registerMode">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">Find your match</h1>
+      <p class="col-md-8 fs-4">Login to view your matches and start chatting. If you don't have an accoun, register below!</p>
+      <button (click)="registerToggle()" class="btn btn-primary btn-lg" type="button">Register</button>
+    </div>
+  </div>
+
+  <div *ngIf="registerMode" class="container">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <app-register></app-register>
+      </div>
+    </div>
+  </div>
+</div>
